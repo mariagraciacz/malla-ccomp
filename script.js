@@ -113,7 +113,19 @@ const prerequisitos = {
   'software_ind': ['software'],
   'leng_natural': ['a_profundo'],
   'tesis4': ['tesis3'],
-  'realidad_virtual': ['compt_grafica']
+  'realidad_virtual': ['compt_grafica'],
+  'historia':[],
+  'realidad':[],
+  'gnoseologia':[],
+  'metafisica':[],
+  'antropologia':[],
+  'moral':[],
+  'fe_razon':[],
+  'teologia':[],
+  'liderazgo':[],
+  'iglesia':[],
+  'cultura':[],
+  'etica':[],
 };
 
 // Funciones para guardar y cargar progreso en localStorage
