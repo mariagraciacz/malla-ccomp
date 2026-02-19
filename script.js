@@ -179,7 +179,7 @@ function actualizarDesbloqueos() {
 
 // Maneja el clic para aprobar o desaprobar un ramo (solo si no está bloqueado)
 function aprobar(e) {
-  const ramo = e.currentTarget;
+  const ramo = typeof e === 'string' ? document.getElementById(e) : e.currentTarget;
   if (ramo.classList.contains('bloqueado')) return;
 
   ramo.classList.toggle('aprobado');
@@ -194,7 +194,27 @@ function aprobar(e) {
   guardarAprobados(aprobados);
 
   actualizarDesbloqueos();
+  actualizarContadorCreditos(); // 🔹 actualizar después de cada cambio
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const todosRamos = document.querySelectorAll('.ramo');
+
+  const aprobados = obtenerAprobados();
+  todosRamos.forEach(ramo => {
+    if (aprobados.includes(ramo.id)) {
+      ramo.classList.add('aprobado');
+    }
+  });
+
+  todosRamos.forEach(ramo => {
+    ramo.addEventListener('click', aprobar);
+  });
+
+  actualizarDesbloqueos();
+  actualizarContadorCreditos(); // 🔹 inicializar al cargar
+});
+
 
 // Al cargar la página, asignar eventos, cargar progreso y actualizar desbloqueos
 window.addEventListener('DOMContentLoaded', () => {
@@ -213,3 +233,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   actualizarDesbloqueos();
 });
+
+// Calcula créditos totales posibles
+function calcularCreditosTotales() {
+  return Object.values(creditos).reduce((sum, c) => sum + c, 0);
+}
+
+// Actualiza el contador en la parte superior
+function actualizarContadorCreditos() {
+  const aprobados = calcularCreditosAprobados();
+  const total = calcularCreditosTotales();
+  const contador = document.getElementById('contador-creditos');
+  if (contador) {
+    contador.textContent = `${aprobados}/${total} créditos aprobados`;
+  }
+}
+
