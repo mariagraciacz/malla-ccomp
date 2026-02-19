@@ -84,3 +84,13 @@ h1 {
   font-style: italic;
   box-shadow: 4px 4px 8px #8a69a2, -4px -4px 8px #c6aee1;
 }
+
+#contador-creditos {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
