@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Interactiva CCOMP – UCSP</title>
+  <meta name="description" content="Explora la malla curricular interactiva de Ciencias de la Computación en la Universidad Católica San Pablo. Descubre requisitos por semestre y desbloquea ramos al aprobar.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+  <h1>Ciencias de la Computación - UCSP</h1>
+  <div class="malla-grid">
+    <div class="semestre" id="sem1">
+      <h2>1° Semestre</h2>
+      <div class="ramo" id="intro_vida" onclick="aprobar('intro_vida')">Introducción a la Vida Universitaria</div>
+      <div class="ramo" id="com1" onclick="aprobar('com1')">Comunicación I</div>
+      <div class="ramo" id="logica" onclick="aprobar('logica')">Lógica</div>
+      <div class="ramo" id="fundamentos" onclick="aprobar('fundamentos')">Fundamentos de Programación</div>
+      <div class="ramo" id="mate" onclick="aprobar('mate')">Fundamentos Matemáticos para Computación</div>
+      <div class="ramo" id="intro_compt" onclick="aprobar('intro_compt')">Introducción a Computación</div>
+    </div>
+
+    <div class="semestre" id="sem2">
+      <h2>2° Semestre</h2>
+      <div class="ramo bloqueado" id="com2" onclick="aprobar('com2')">Comunicación II</div>
+      <div class="ramo bloqueado" id="calc1" onclick="aprobar('calc1')">Cálculo Diferencial e Integral I</div>
+      <div class="ramo bloqueado" id="historia" onclick="aprobar('historia')">Historia de Occidente</div>
+      <div class="ramo bloqueado" id="poo" onclick="aprobar('poo')">Programación Orientada a Objetos</div>
+      <div class="ramo bloqueado" id="discretas" onclick="aprobar('discretas')">Estructuras Discretas</div>
+    </div>
+
+    <div class="semestre" id="sem3">
+      <h2>3° Semestre</h2>
+      <div class="ramo bloqueado" id="realidad" onclick="aprobar('realidad')">Análisis de la Realidad Peruana</div>
+      <div class="ramo bloqueado" id="algebra" onclick="aprobar('algebra')">Álgebra Lineal Computacional</div>
+      <div class="ramo bloqueado" id="datos" onclick="aprobar('datos')">Base de Datos</div>
+      <div class="ramo bloqueado" id="calc2" onclick="aprobar('calc2')">Cálculo Diferencial e Integral II</div>
+      <div class="ramo bloqueado" id="gnoseologia" onclick="aprobar('gnoseologia')">Gnoseología y Tecnociencia</div>
+      <div class="ramo bloqueado" id="tap" onclick="aprobar('tap')">Técnicas Avanzadas de Programación</div>
+    </div>
+
+    <div class="semestre" id="sem4">
+      <h2>4° Semestre</h2>
+      <div class="ramo bloqueado" id="metafisica" onclick="aprobar('metafisica')">Metafísica</div>
+      <div class="ramo bloqueado" id="algoritmos" onclick="aprobar('algoritmos')">Algoritmos y Estructuras de Datos</div>
+      <div class="ramo bloqueado" id="estadistica" onclick="aprobar('estadistica')">Estadística y Probabilidades</div>
+      <div class="ramo bloqueado" id="fisica" onclick="aprobar('fisica')">Física Computacional</div>
+      <div class="ramo bloqueado" id="analisis_num" onclick="aprobar('analisis_num')">Análisis Numérico</div>
+      <div class="ramo bloqueado" id="antropologia" onclick="aprobar('antropologia')">Antropología y Nuevas Tecnologías</div>
+    </div>
+
+    <div class="semestre" id="sem5">
+      <h2>5° Semestre</h2>
+      <div class="ramo bloqueado" id="software" onclick="aprobar('software')">Ingeniería de Software</div>
+      <div class="ramo bloqueado" id="arqui" onclick="aprobar('arqui')">Arquitectura de Computadores</div>
+      <div class="ramo bloqueado" id="moral" onclick="aprobar('moral')">Moral</div>
+      <div class="ramo bloqueado" id="leng_prog" onclick="aprobar('leng_prog')">Lenguajes de Programación</div>
+      <div class="ramo bloqueado" id="analisis_algo" onclick="aprobar('analisis_algo')">Análisis de Algoritmos</div>
+      <div class="ramo bloqueado" id="simulacion" onclick="aprobar('simulacion')">Simulación Estocástica Computacional</div>
+    </div>
+
+    <div class="semestre" id="sem6">
+      <h2>6° Semestre</h2>
+      <div class="ramo bloqueado" id="sist_operativos" onclick="aprobar('sist_operativos')">Sistemas Operativos</div>
+      <div class="ramo bloqueado" id="compiladores" onclick="aprobar('compiladores')">Compiladores</div>
+      <div class="ramo bloqueado" id="big_data" onclick="aprobar('big_data')">Big Data</div>
+      <div class="ramo bloqueado" id="fe_razon" onclick="aprobar('fe_razon')">Fe y Razón</div>
+      <div class="ramo bloqueado" id="fund_cdatos" onclick="aprobar('fund_cdatos')">Fundamentos de Ciencia de Datos</div>
+      <div class="ramo bloqueado" id="fund_ia" onclick="aprobar('fund_ia')">Fundamentos de Inteligencia Artificial</div>
+    </div>
+
+    <div class="semestre" id="sem7">
+      <h2>7° Semestre</h2>
+      <div class="ramo bloqueado" id="tesis_1" onclick="aprobar('tesis_1')">Proyecto de Tesis I</div>
+      <div class="ramo bloqueado" id="teoria_compt" onclick="aprobar('teoria_compt')">Teoría de la Computación</div>
+      <div class="ramo bloqueado" id="teologia" onclick="aprobar('teologia')">Teología</div>
+      <div class="ramo bloqueado" id="liderazgo" onclick="aprobar('liderazgo')">Liderazgo</div>
+      <div class="ramo bloqueado" id="redes_com" onclick="aprobar('redes_com')">Redes y Comunicación</div>
+      <div class="ramo bloqueado" id="machine_learning" onclick="aprobar('machine_learning')">Aprendizaje de Máquina</div>
+      <div class="ramo" id="prog_web" onclick="aprobar('prog_web')">Programación Web, Móvil y Multiplataforma</div>
+    </div>
+
+    <div class="semestre" id="sem8">
+      <h2>8° Semestre</h2>
+      <div class="ramo bloqueado" id="tesis2" onclick="aprobar('tesis2')">Proyecto de Tesis II</div>
+      <div class="ramo bloqueado" id="compt_grafica" onclick="aprobar('compt_grafica')">Computación Gráfica</div>
+      <div class="ramo bloqueado" id="a_profundo" onclick="aprobar('a_profundo')">Aprendizaje Profundo</div>
+      <div class="ramo bloqueado" id="ciberseguridad" onclick="aprobar('ciberseguridad')">Ciberseguridad en Redes de Datos</div>
+      <div class="ramo bloqueado" id="alto_desempeño" onclick="aprobar('alto_desempeño')">Computación de Alto Desempeño</div>
+      <div class="ramo bloqueado" id="startup" onclick="aprobar('startup')">Creación de Startups Basadas en Computación</div>
+    </div>
+
+    <div class="semestre" id="sem9">
+      <h2>9° Semestre</h2>
+      <div class="ramo bloqueado" id="humano_compt" onclick="aprobar('humano_compt')">Interacción Humano Computador</div>
+      <div class="ramo bloqueado" id="iglesia" onclick="aprobar('iglesia')">Enseñanza Social de la Iglesia</div>
+      <div class="ramo bloqueado" id="a_refuerzo" onclick="aprobar('a_refuerzo')">Aprendizaje por Refuerzo</div>
+      <div class="ramo bloqueado" id="cloud" onclick="aprobar('cloud')">Computación en la Nube</div>
+      <div class="ramo bloqueado" id="responsable" onclick="aprobar('responsable')">Computación Responsable</div>
+      <div class="ramo bloqueado" id="cultura" onclick="aprobar('cultura')">Cultura, Ciencia y Nuevas Tecnologías</div>
+      <div class="ramo bloqueado" id="tesis3" onclick="aprobar('tesis3')">Proyecto de Tesis III en Ciencia de la Computación</div>
+    </div>
+
+    <div class="semestre" id="sem10">
+      <h2>10° Semestre</h2>
+      <div class="ramo bloqueado" id="etica" onclick="aprobar('etica')">Ética Profesional</div>
+      <div class="ramo bloqueado" id="vision" onclick="aprobar('vision')">Visión Computacional</div>
+      <div class="ramo bloqueado" id="block_cripto" onclick="aprobar('block_cripto')">Blockchain y Criptografía</div>
+      <div class="ramo bloqueado" id="cuantica" onclick="aprobar('cuantica')">Computación Cuántica</div>
+      <div class="ramo bloqueado" id="videojuegos" onclick="aprobar('videojuegos')">Desarrollo de Videojuegos</div>
+      <div class="ramo bloqueado" id="software_ind" onclick="aprobar('software_ind')">Ingeniería de Software en la Industria</div>
+      <div class="ramo bloqueado" id="leng_natural" onclick="aprobar('leng_natural')">Procesamiento de Lenguaje Natural</div>
+      <div class="ramo bloqueado" id="tesis4" onclick="aprobar('tesis4')">Proyecto de Tesis IV en Ciencia de la Computación</div>
+      <div class="ramo bloqueado" id="realidad_virtual" onclick="aprobar('realidad_virtual')">Realidad Virtual y Aumentada</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <style>
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #c2185b;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  </style>
+</body>
+</html>
